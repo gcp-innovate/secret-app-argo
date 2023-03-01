@@ -23,7 +23,7 @@ steps:
     - '-t'
     - 'us-docker.pkg.dev/google-samples/containers/gke/wi-secret-store'
     - '.'
-  dir: '/security/wi-secrets'
+  dir: '/'
 
 # Push images.
 images:
