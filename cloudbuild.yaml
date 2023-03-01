@@ -36,7 +36,7 @@ steps:
   args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/secret-app-argo:$COMMIT_SHA", "."]
   dir: "/workspace"
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/gcp-practice-prj-357704/secret-app-argo:$COMMIT_SHA", "."]
+  args: ["push", "gcr.io/gcp-practice-prj-357704/secret-app-argo:$COMMIT_SHA"]
   dir: "/workspace"
 #####
 - name: "gcr.io/cloud-builders/kubectl"
