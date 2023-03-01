@@ -36,5 +36,4 @@ steps:
 #  args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/secret-app-argo", "."]
 #  dir: "/workspace"
 #####
-options:
-  logging: CLOUD_LOGGING_ONLY
+
