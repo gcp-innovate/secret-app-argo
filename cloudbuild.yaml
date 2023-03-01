@@ -29,9 +29,9 @@
 #images:
 #  - 'gcr.io/gcp-practice-prj-357704/secret-app-argo'
 steps:
-- name: "gcr.io/gcp-practice-prj-357704/git"
+- name: "gcr.io/cloud-builders/git"
   args: ["clone", "https://github.com/gcp-innovate/secret-app-argo", "."]
   dir: "/workspace"
-- name: "gcr.io/gcp-practice-prj-357704/docker"
-  args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/secret-app-argo", "."]
-  dir: "/workspace"
+#- name: "gcr.io/cloud-builders/docker"
+#  args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/secret-app-argo", "."]
+#  dir: "/workspace"
