@@ -33,7 +33,7 @@ steps:
 #  args: ["clone", "https://github.com/gcp-innovate/secret-app-argo.git", "."]
 #  dir: "/workspace"
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/github.com/gcp-innovate/secret-app-argo:$COMMIT_SHA", "."]
+  args: ["build", "-t", "gcr.io/gcp-practice-prj-357704/github.com/gcp-innovate/secret-app-argo:latest", "."]
   dir: "/workspace"
 #####
 - name: "gcr.io/cloud-builders/kubectl"
