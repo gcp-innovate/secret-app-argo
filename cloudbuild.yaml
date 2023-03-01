@@ -37,4 +37,4 @@ steps:
 #  dir: "/workspace"
 #####
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
