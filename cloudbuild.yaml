@@ -23,8 +23,8 @@ steps:
     - '-t'
     - 'us-docker.pkg.dev/google-samples/containers/gke/wi-secret-store'
     - '.'
-  dir: 'security/wi-secrets'
+  dir: '/secret-app-argo'
 
 # Push images.
 images:
-  - 'us-docker.pkg.dev/google-samples/containers/gke/wi-secret-store'
+  - 'gcr.io/gcp-practice-prj-357704/secret-app-argo'

@@ -14,14 +14,14 @@
 
 FROM golang:1.19.2 as builder
 WORKDIR /app
-RUN go mod init wi-secrets
+RUN go mod init secret-app-argo
 RUN go get cloud.google.com/go/secretmanager/apiv1
 RUN go get google.golang.org/genproto/googleapis/cloud/secretmanager/v1
 COPY *.go ./
-RUN CGO_ENABLED=0 GOOS=linux go build -o /wi-secrets
+RUN CGO_ENABLED=0 GOOS=linux go build -o /secret-app-argo
 
 FROM gcr.io/distroless/base-debian11
 WORKDIR /
-COPY --from=builder /wi-secrets /wi-secrets
+COPY --from=builder /secret-app-argo /secret-app-argo
 USER nonroot:nonroot
-CMD ["/wi-secrets"]
+CMD ["/secret-app-argo"]
